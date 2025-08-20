@@ -1,0 +1,11 @@
+package baekjoon_250814;
+
+public class Ijava {
+
+	public static void main(String[] args) {
+		byte a = 129;
+		
+
+	}
+
+}
