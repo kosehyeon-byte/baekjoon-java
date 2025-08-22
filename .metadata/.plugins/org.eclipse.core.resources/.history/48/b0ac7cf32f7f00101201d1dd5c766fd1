@@ -1,0 +1,26 @@
+package baekjoon_250822;
+
+import java.util.Scanner;
+
+public class No10952 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		StringBuilder sb = new StringBuilder();
+		
+		while(true) {
+			int num1 = sc.nextInt();
+			int num2 = sc.nextInt();
+			if (num1 == 0 && num2 == 0) break;
+			sb.append(num1+num2);
+			sb.append("\n");
+			
+		}
+		
+		System.out.print(sb);
+		
+		sc.close();
+
+	}
+
+}
