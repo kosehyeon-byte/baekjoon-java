@@ -1,0 +1,11 @@
+package baekjoon_250823;
+
+public class Practice {
+
+	public static void main(String[] args) {
+		String str = "\u0ab3";
+		System.out.println(str);
+
+	}
+
+}
