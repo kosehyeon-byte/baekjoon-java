@@ -1,0 +1,37 @@
+package baekjoon_250826;
+
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class No10811 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int n = sc.nextInt();
+		int m = sc.nextInt();
+		ArrayList<Integer> basket = new ArrayList<>();
+		
+		for (int i=1; i <= n; i++) {
+			basket.add(i);
+		}
+		
+		for (int j=1; j <= m; j++) {
+			int start = sc.nextInt();
+			int end = sc.nextInt();
+			int number = (end-start+1) / 2;
+			for (int k=0; k < number; k++) {
+				int temp = basket.get(start-1);
+				basket.set(start, basket.get(end-1));
+				basket.set(end-1, temp);
+				start++;
+				end--;
+			}
+		}
+		System.out.println(basket);
+		
+		sc.close();
+
+	}
+
+}
