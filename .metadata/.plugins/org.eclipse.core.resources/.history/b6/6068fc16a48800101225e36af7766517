@@ -1,0 +1,39 @@
+package baekjoon_250903;
+
+import java.util.Scanner;
+
+public class No10809 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String str = sc.next();
+		String str2 = str.toLowerCase();
+		int[] arr = new int[26];
+		for (int k = 0; k < 26; k++) {
+			arr[k] = -1;
+		}
+		
+		char a = 'a';
+		char z = 'z';
+		int start = a;
+		int end = z;
+		for (int i=start; i <= end; i++) {
+			for (int j=0; j < str2.length(); j++) {
+				char ch = str2.charAt(j);
+				int ch2 = ch;
+				if (i == ch2) {
+					arr[i-start] = j;
+				}
+			}
+		}
+		
+		for (int m=0; m < 26; m++) {
+			System.out.print(arr[m] + " ");
+		}
+		
+		
+		sc.close();
+	}
+
+}
