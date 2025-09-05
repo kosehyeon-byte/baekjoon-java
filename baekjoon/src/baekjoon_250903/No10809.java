@@ -8,31 +8,13 @@ public class No10809 {
 		Scanner sc = new Scanner(System.in);
 		
 		String str = sc.next();
-		String str2 = str.toLowerCase();
-		int[] arr = new int[26];
-		for (int k = 0; k < 26; k++) {
-			arr[k] = -1;
+		StringBuilder sb = new StringBuilder();
+		
+		for (char c = 'a'; c <= 'z'; c++) {
+			sb.append(str.indexOf(c)).append(" ");
 		}
 		
-		char a = 'a';
-		char z = 'z';
-		int start = a;
-		int end = z;
-		for (int i=start; i <= end; i++) {
-			for (int j=0; j < str2.length(); j++) {
-				char ch = str2.charAt(j);
-				int ch2 = ch;
-				if (i == ch2) {
-					arr[i-start] = j;
-					break;
-				}
-			}
-		}
-		
-		for (int m=0; m < 26; m++) {
-			System.out.print(arr[m] + " ");
-		}
-		
+		System.out.println(sb.toString());
 		
 		sc.close();
 	}

@@ -1,0 +1,26 @@
+package baekjoon_250905;
+
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class No1152 {
+
+	public static void main(String[] args) {
+		int n = 0;
+		Scanner sc = new Scanner(System.in);
+		
+		String s = sc.nextLine();
+		StringTokenizer st = new StringTokenizer(s);
+		
+		while (st.hasMoreTokens()) {
+			st.nextToken();
+			n += 1;
+		}
+		
+		System.out.println(n);
+		
+		sc.close();
+
+	}
+
+}
