@@ -1,0 +1,25 @@
+package baekjoon_250913;
+
+import java.util.StringTokenizer;
+import java.util.*;
+import java.io.*;
+
+public class No25206_better {
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		Map<String, List<Double>> map = new HashMap<>();
+		
+		for (int i = 0; i < 20; i++) {
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            String key = st.nextToken();       // 문자열
+            double value1 = Double.parseDouble(st.nextToken());
+            
+            double value2 = Double.parseDouble(st.nextToken());
+            map.put(key, new ArrayList());
+        }
+		
+
+	}
+
+}

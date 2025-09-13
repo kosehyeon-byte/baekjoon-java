@@ -1,0 +1,56 @@
+package baekjoon_250913;
+
+import java.util.Scanner;
+
+public class No25206 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String[][] arr = new String[20][3];
+		for(int i=0; i < arr.length; i++) {
+			String str = sc.nextLine();
+			String[] strarr = str.split(" ");
+			for (int j=0; j < arr[i].length; j++) {
+				arr[i][j]=strarr[j];
+			}
+		}
+		
+		double[] douarr = new double[20];
+		double[] douarr2 = new double[20];
+		
+		for (int k = 0; k < arr.length; k++) {
+			douarr[k] = Double.parseDouble(arr[k][1]);
+		}
+		
+		for (int m = 0 ; m < arr.length; m++) {
+			switch (arr[m][2]) {
+			case "A+" -> douarr2[m]=Double.parseDouble("4.5");
+			case "A0" -> douarr2[m]=Double.parseDouble("4.0");
+			case "B+" -> douarr2[m]=Double.parseDouble("3.5");
+			case "B0" -> douarr2[m]=Double.parseDouble("3.0");
+			case "C+" -> douarr2[m]=Double.parseDouble("2.5");
+			case "C0" -> douarr2[m]=Double.parseDouble("2.0");
+			case "D+" -> douarr2[m]=Double.parseDouble("1.5");
+			case "D0" -> douarr2[m]=Double.parseDouble("1.0");
+			case "F" -> douarr2[m]=Double.parseDouble("0.0");
+			
+			}
+		}	
+		
+		double sum = 0, sumlen =0;
+		
+		for (int n = 0; n < 20; n++) {
+			if (arr[n][2].equals("P")) continue;
+			sum += douarr[n] * douarr2[n];
+			sumlen += douarr[n];
+		}
+		
+		System.out.printf("%.5f", sum/sumlen);
+		
+		
+		
+		sc.close();
+	}
+
+}

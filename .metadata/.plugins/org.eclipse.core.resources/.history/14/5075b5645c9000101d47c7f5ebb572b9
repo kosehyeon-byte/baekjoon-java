@@ -1,0 +1,30 @@
+package thisisjava;
+
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		/*
+		 int num =0;
+		
+		String str = sc.next();
+		
+		while (str.length() >= 3) {
+			if (str.substring(0,2)=="c=") {num += 1; str = str.substring(2); System.out.println(str); System.out.println(num);}
+			else if (str.substring(0,2)=="c-") {num += 1; str = str.substring(2); System.out.println(str); System.out.println(num);}
+			else if (str.substring(0,3)=="dz=") {num += 1; str = str.substring(3); System.out.println(str); System.out.println(num);}
+			else if (str.substring(0,2)=="d-") {num += 1; str = str.substring(2); System.out.println(str); System.out.println(num);}
+			else if (str.substring(0,2)=="lj") {num += 1; str = str.substring(2); System.out.println(str); System.out.println(num);}
+			else if (str.substring(0,2)=="nj") {num += 1; str = str.substring(2); System.out.println(str); System.out.println(num);}
+			else if (str.substring(0,2)=="s=") {num += 1; str = str.substring(2); System.out.println(str); System.out.println(num);}
+			else if (str.substring(0,2)=="z=") {num += 1; str = str.substring(2); System.out.println(str); System.out.println(num);}
+			else {num += 1; str = str.substring(1);}
+		}
+		
+		System.out.println(num);
+		 */
+		
+		
+	}
+}

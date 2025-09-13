@@ -1,0 +1,11 @@
+package baekjoon_250913;
+
+public class No25206_better {
+
+	public static void main(String[] args) {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+
+	}
+
+}

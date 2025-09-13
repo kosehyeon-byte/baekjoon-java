@@ -1,0 +1,42 @@
+package baekjoon_250913;
+
+import java.io.*;
+
+public class No1316 {
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int num = 0;
+		int n = Integer.parseInt(br.readLine());
+		
+		for (int i=0; i < n; i++) {
+			String str = br.readLine();
+			for (int j=0; j < str.length(); j++) {
+				boolean bl = true;
+				int k = j;
+				
+				while (k < str.length()-1) {
+					if (str.charAt(k) == str.charAt(k+1)) {
+						k += 1;
+					} else {bl = false; k += 2; break;}
+				}
+				
+				if (bl == true) {num += 1; continue;}
+				else if (bl == false && k == str.length()) {num += 1; continue;}
+				else {
+					while (k < str.length()) {
+						if (str.charAt(j) == str.charAt(k)) {break;}
+						k++;
+					}
+				}
+				// bl=true, k=str.length-1 >> 천부 한 문자
+				// bl=false, k = str.length >> 마지막만 다른 문자
+				// bl=false, k <= str.length-1 >> str.charAt[j]랑 검사 until k == str.length
+			}
+		}
+		
+		System.out.println(num);
+
+	}
+
+}

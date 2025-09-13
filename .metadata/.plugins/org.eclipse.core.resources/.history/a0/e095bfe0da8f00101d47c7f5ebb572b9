@@ -1,0 +1,30 @@
+package baekjoon_250911;
+
+import java.util.Scanner;
+
+public class No2941 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num=0;
+		String str = sc.next();
+		String[] arr = {"c=","c-","lj","nj","dz=","d-","s=","z="};
+		
+		
+		for (String a : arr) {
+			int idx;
+			while ((idx = str.indexOf(a)) != -1) {
+				num+=1;
+				str = str.replace(a, "");
+			}
+		}
+		
+		
+		
+		System.out.println(str);
+		
+		sc.close();
+
+	}
+
+}

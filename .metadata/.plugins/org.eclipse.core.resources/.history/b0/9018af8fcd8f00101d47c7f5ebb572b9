@@ -1,0 +1,31 @@
+package baekjoon_250911;
+
+import java.util.Scanner;
+
+public class No2941 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num =0;
+		
+		String str = sc.next();
+		
+		while (str.length() > 0) {
+			if (str.substring(0,2)=="c=") {num += 1; str = str.substring(2);}
+			else if (str.substring(0,2)=="c-") {num += 1; str = str.substring(2);}
+			else if (str.substring(0,3)=="dz=") {num += 1; str = str.substring(3);}
+			else if (str.substring(0,2)=="d-") {num += 1; str = str.substring(2);}
+			else if (str.substring(0,2)=="lj") {num += 1; str = str.substring(2);}
+			else if (str.substring(0,2)=="nj") {num += 1; str = str.substring(2);}
+			else if (str.substring(0,2)=="s=") {num += 1; str = str.substring(2);}
+			else if (str.substring(0,2)=="z=") {num += 1; str = str.substring(2);}
+			else {num += 1; str = str.substring(1);}
+		}
+		
+		System.out.println(num);
+		
+		sc.close();
+
+	}
+
+}

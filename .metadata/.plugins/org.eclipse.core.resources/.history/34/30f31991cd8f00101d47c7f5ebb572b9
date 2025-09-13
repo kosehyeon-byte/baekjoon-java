@@ -1,0 +1,15 @@
+package thisisjava;
+
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String a = "java";
+		String b = "java";
+		
+		System.out.println(a==b);
+	}
+}

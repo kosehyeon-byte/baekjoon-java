@@ -1,0 +1,25 @@
+package baekjoon_250911;
+
+import java.util.Scanner;
+
+public class No2941 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int num=0;
+		String str = sc.next();
+		
+		while (str.length() > 2) {
+			switch (str.substring(0,2)) {
+			case "c=", "c-", "d-", "lj", "nj", "s=", "z=": num += 1; str=str.substring(2);
+			}
+		}
+		
+		System.out.println(num);
+		
+		sc.close();
+
+	}
+
+}

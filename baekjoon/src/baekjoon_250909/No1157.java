@@ -2,8 +2,6 @@ package baekjoon_250909;
 
 import java.io.*;
 import java.util.Arrays;
-import java.util.List;
-import java.util.ArrayList;
 
 public class No1157 {
 
@@ -15,7 +13,6 @@ public class No1157 {
 		str = str.toLowerCase();
 		for (int i=0; i<str.length(); i++) {
 			arr[(str.charAt(i) - 'a')] += 1;
-			
 		}
 		
 		int max = Arrays.stream(arr).max().getAsInt();
@@ -23,13 +20,13 @@ public class No1157 {
 		
 		for (int j=0; j < arr.length; j++) {
 			if (arr[j] == max) {
-				sb.append((char) j + 'a');
+				sb.append((char) ('a' + j) );
 			}
 		}
 			
 		
-		if (sb.length() > 2) {System.out.println("?");}
-		else {System.out.println(sb.toString());}
+		if (sb.length() >= 2) {System.out.println("?");}
+		else {System.out.println(sb.toString().toUpperCase());}
 		
 		
 	}
